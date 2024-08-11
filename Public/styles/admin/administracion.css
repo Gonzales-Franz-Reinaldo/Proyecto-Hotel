@@ -63,7 +63,7 @@
   display: flex;
   justify-content: space-between;
   height: 80px;
-  background: rgb(78, 132, 218);
+  background: rgb(34, 75, 142);
   padding: 5px;
   justify-content: center;
   align-items: center;
@@ -80,13 +80,142 @@
 }
 .container .container-main .menu-navegacion .perfil img {
   width: 50px;
-  height: 50px;
+  height: 60px;
   border-radius: 50%;
 }
 .container .container-main .contenido {
   display: flex;
   flex-direction: column;
-  padding: 10px;
   justify-content: center;
   align-items: center;
+  height: 100%;
+}
+.container .container-main .contenido .reservas {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+.container .container-main .contenido .reservas .menu-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 20px;
+  width: 100%;
+  background: rgba(30, 130, 172, 0.853);
+}
+.container .container-main .contenido .reservas .menu-navigation ul {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  width: 70%;
+  justify-content: space-between;
+}
+.container .container-main .contenido .reservas .menu-navigation ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+}
+.container .container-main .contenido .reservas .menu-navigation ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.container .container-main .contenido .reservas .reserva-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+.container .container-main .contenido .reservas .reserva-contenido img {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card {
+  background-color: #fff;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #555;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones .confirm-btn {
+  background-color: #28a745;
+  color: white;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones .confirm-btn:hover {
+  background-color: #218838;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones .cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones .cancel-btn:hover {
+  background-color: #c82333;
+}
+.container .container-main footer {
+  background: rgb(36, 171, 238);
+  width: 100%;
+  padding: 20px;
+  margin-top: auto;
+}
+.container .container-main footer p {
+  color: white;
+  text-align: center;
+  font-size: 18px;
 }/*# sourceMappingURL=administracion.css.map */
