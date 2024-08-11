@@ -18,3 +18,25 @@ function cargarReservas(abrir) {
       contenido.innerHTML = data;
     });
 }
+
+
+// PARA CONFIRMAR LA RESERVA POR CORREO 
+function confirmarReserva(reservaId) {
+  if (confirm("¿Estás seguro de que quieres confirmar esta reserva?")) {
+      fetch(`../../src/Controllers/confirmar_reserva.php?id=${reservaId}`, {
+          method: 'GET',
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              alert('Reserva confirmada y correo enviado.');
+              // location.reload(); 
+          } else {
+              alert('Hubo un error al confirmar la reserva.');
+          }
+      })
+      .catch(error => console.error('Error:', error));
+  }
+}
+
+
