@@ -132,6 +132,7 @@
   padding: 10px;
   height: 100%;
   width: 100%;
+  overflow-y: hidden;
 }
 .container .container-main .contenido .reservas .reserva-contenido img {
   width: 800px;
@@ -145,7 +146,8 @@
   align-items: center;
   width: 100%;
   gap: 10px;
-  padding: 10px;
+  max-height: 90vh;
+  overflow-y: scroll;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes h1 {
   text-align: center;
@@ -158,10 +160,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding-bottom: 20px;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card {
   background-color: #fff;
-  width: 400px;
+  width: 500px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
