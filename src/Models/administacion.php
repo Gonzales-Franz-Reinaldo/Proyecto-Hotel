@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recepcionista</title>
+    <link rel="stylesheet" href="../../Public/styles/admin/administracion.css">
+    <script src="../../Public/Js/administracion.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-menu">
+            <div class="perfil-hotel">
+                <img src="https://media.licdn.com/dms/image/C5603AQHspVjFZatw0A/profile-displayphoto-shrink_200_200/0/1517064065833?e=2147483647&v=beta&t=9XPDnNcafi8brTkNtU165Tka09qD19LDA6yKP5ogpkI" alt="hotel">
+                <h2>Hotel Las Américas</h2>
+            </div>
+            <hr>
+            <div class="menu-opciones">
+                <div class="opciones"><a href="">Habitaciones</a></div>
+                <div class="opciones"><a href="javascript:cargarContenido('historial_reservas.php')">Reservas</a></div>
+                <div class="opciones"><a href="">Clientes</a></div>
+                <div class="opciones"><a href="">Reportes</a></div>
+                <div class="opciones"><a href="">Administración</a></div>
+            </div>
+        </div>
+
+        <div class="container-main">
+            <div class="menu-navegacion">
+                <div class="perfil">
+                    <img src="https://aulavirtual.cmeducativa.es/wp-content/uploads/avatars/1/5f210a29ad962-bpfull.png" alt="admin">
+                    <h2>Juan Perez</h2>
+                </div>
+                <p><a href="">Cerrar Sesión</a></p>
+            </div>
+
+            <div class="contenido" id="contenido">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
