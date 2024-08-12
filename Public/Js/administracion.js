@@ -49,10 +49,9 @@ function rechazarReserva(reservaId) {
       .then(response => response.json())
       .then(data => {
           if (data.success) {
-              alert('Reserva rechazada.');
               // location.reload(); 
           } else {
-              alert('Hubo un error al confirmar la reserva.');
+              alert('La reserva fue rechazada.');
           }
       })
       .catch(error => console.error('Error:', error));

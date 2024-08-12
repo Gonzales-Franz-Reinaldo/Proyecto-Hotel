@@ -36,9 +36,7 @@
             </div>
 
             <!-- EN ESTA PARTE SE CARGARÁN LOS CONTENIDOS -->
-            <div class="contenido" id="contenido">
-
-            </div>
+            <div class="contenido" id="contenido"></div>
 
             <footer>
                 <p>© 2024 Hotel SUCRE. Todos los derechos reservados.</p>

@@ -5,10 +5,16 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  height: 100vh;
+  width: 100%;
+}
+
 .container {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: row;
 }
 .container .container-menu {
   width: 20%;
@@ -62,7 +68,7 @@
 .container .container-main .menu-navegacion {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 10%;
   background: rgb(34, 75, 142);
   padding: 5px;
   justify-content: center;
@@ -88,7 +94,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 82%;
 }
 .container .container-main .contenido .reservas {
   display: flex;
@@ -104,6 +110,7 @@
   padding: 5px;
   gap: 20px;
   width: 100%;
+  height: 10%;
   background: rgba(30, 130, 172, 0.853);
 }
 .container .container-main .contenido .reservas .menu-navigation ul {
@@ -130,9 +137,8 @@
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  height: 100%;
+  height: 90%;
   width: 100%;
-  overflow-y: hidden;
 }
 .container .container-main .contenido .reservas .reserva-contenido img {
   width: 800px;
@@ -146,13 +152,11 @@
   align-items: center;
   width: 100%;
   gap: 10px;
-  max-height: 90vh;
-  overflow-y: scroll;
+  height: 100%;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes h1 {
   text-align: center;
   color: #333;
-  margin-bottom: 20px;
   font-size: 28px;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container {
@@ -161,33 +165,74 @@
   justify-content: center;
   gap: 20px;
   padding-bottom: 20px;
+  overflow-y: scroll;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card {
   background-color: #fff;
-  width: 400px;
-  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
   border-radius: 10px;
+  background: rgba(147, 236, 221, 0.5058823529);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  height: 330px;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card h2 {
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .text_reserva {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #007bff;
+  color: rgb(5, 130, 5);
+  text-align: center;
 }
-.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card p {
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .datos-reserva {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .datos-reserva .datos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .datos-reserva .datos h2 {
+  text-align: center;
+  color: rgb(29, 72, 213);
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .datos-reserva .datos p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #555;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .datos-reserva .detalles-reserva {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .datos-reserva .detalles-reserva h2 {
+  text-align: center;
+  color: rgb(29, 72, 213);
+}
+.container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .datos-reserva .detalles-reserva p {
   font-size: 16px;
   margin: 5px 0;
   color: #555;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones button {
   padding: 10px 15px;
@@ -215,7 +260,7 @@
   background: rgb(36, 171, 238);
   width: 100%;
   padding: 20px;
-  margin-top: auto;
+  height: 8%;
 }
 .container .container-main footer p {
   color: white;
