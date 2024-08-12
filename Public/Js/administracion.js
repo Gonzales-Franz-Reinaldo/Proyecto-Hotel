@@ -40,3 +40,23 @@ function confirmarReserva(reservaId) {
 }
 
 
+
+function rechazarReserva(reservaId) {
+  if (confirm("¿Estás seguro de que quieres rechazar esta reserva?")) {
+      fetch(`../../src/Controllers/rechazar_reserva.php?id=${reservaId}`, {
+          method: 'GET',
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              alert('Reserva rechazada.');
+              // location.reload(); 
+          } else {
+              alert('Hubo un error al confirmar la reserva.');
+          }
+      })
+      .catch(error => console.error('Error:', error));
+  }
+}
+
+

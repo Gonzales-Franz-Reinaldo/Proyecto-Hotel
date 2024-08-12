@@ -11,7 +11,7 @@ if ($result->num_rows > 0) {
 ?>
 
     <div class="reservas-pendientes">
-        <h1>Nueva Reserva de Habitaciones</h1>
+        <h1>Reservas Pendientes</h1>
         <div class="reservas-container">
 
             <?php
@@ -32,8 +32,8 @@ if ($result->num_rows > 0) {
                     <p><strong>Número de Personas:</strong> <?php echo $row['numero_personas']; ?></p>
                     <p><strong>Estado:</strong> <?php echo $row['estado']; ?></p>
                     <div class="acciones">
-                    <button class="confirm-btn" id="confirm-<?php echo $row['id']; ?>" onclick="confirmarReserva(<?php echo $row['id']; ?>)">Confirmar</button>
-                        <button class="cancel-btn">Cancelar</button>
+                        <button class="confirm-btn" id="confirm-<?php echo $row['id']; ?>" onclick="confirmarReserva(<?php echo $row['id']; ?>)">Confirmar</button>
+                        <button class="cancel-btn" onclick="rechazarReserva(<?php echo $row['id']; ?>)">Rechazar</button>
                     </div>
                 </div>
             <?php
