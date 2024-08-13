@@ -75,6 +75,21 @@ body {
   align-items: center;
   gap: 10px;
 }
+.container .container-main .menu-navegacion .home-link {
+  text-decoration: none;
+  font-size: 24px;
+  color: #1e1e1e;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.container .container-main .menu-navegacion .home-link i {
+  margin-right: 8px;
+}
+.container .container-main .menu-navegacion .home-link:hover {
+  transform: scale(1.1);
+  color: #3c95f5;
+}
 .container .container-main .menu-navegacion p a {
   color: white;
 }
@@ -165,9 +180,11 @@ body {
   justify-content: center;
   gap: 20px;
   padding-bottom: 20px;
+  width: 100%;
   overflow-y: scroll;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card {
+  margin-top: 5px;
   background-color: #fff;
   width: 90%;
   display: flex;
@@ -177,7 +194,7 @@ body {
   background: rgba(147, 236, 221, 0.5058823529);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 330px;
+  height: 350px;
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card:hover {
   transform: translateY(-10px);

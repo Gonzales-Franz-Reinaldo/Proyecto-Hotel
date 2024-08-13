@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recepcionista</title>
     <link rel="stylesheet" href="../../Public/styles/admin/administracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <script src="../../Public/Js/administracion.js"></script>
 </head>
 
@@ -28,6 +30,10 @@
 
         <div class="container-main">
             <div class="menu-navegacion">
+                <a href="" class="home-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+
                 <div class="perfil">
                     <img src="https://aulavirtual.cmeducativa.es/wp-content/uploads/avatars/1/5f210a29ad962-bpfull.png" alt="admin">
                     <h2>Juan Perez</h2>

@@ -91,6 +91,25 @@ body{
             align-items: center;
             gap: 10px;
 
+            .home-link {
+                text-decoration: none; 
+                font-size: 24px; 
+                color: #1e1e1e; 
+                display: inline-flex; 
+                align-items: center;
+                transition: transform 0.3s ease, color 0.3s ease; 
+
+                i {
+                    margin-right: 8px; 
+                }
+
+                &:hover {
+                    transform: scale(1.1); 
+                    color: #3c95f5; 
+                }
+            }
+            
+
             p {
                 a {
                     // text-decoration: none;
@@ -220,10 +239,12 @@ body{
                             justify-content: center;
                             gap: 20px;
                             padding-bottom: 20px;
+                            width: 100%;
                             overflow-y: scroll;
 
 
                             .reserva-card {
+                                margin-top: 5px;
                                 background-color: #fff;
                                 width: 90%;
                                 display: flex;
@@ -235,7 +256,7 @@ body{
                                 transition:
                                     transform 0.3s,
                                     box-shadow 0.3s;
-                                height: 330px;
+                                height: 350px;
 
                                 &:hover {
                                     transform: translateY(-10px);
