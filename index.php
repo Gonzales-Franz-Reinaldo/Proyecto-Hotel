@@ -24,6 +24,7 @@
                     <div class="secciones"><a href="javascript:cargarContenido('./src/Models/promociones.php')">Promociones</a></div>
                     <!-- <div class="secciones"><a href="#">Acerca de Nosotros</a></div>
                     <div class="secciones"><a href="#">Habitaciones</a></div> -->
+                    <!-- <div></div> -->
                 </div>
                 <div class="roles">
                     <div class="rol-boton">
