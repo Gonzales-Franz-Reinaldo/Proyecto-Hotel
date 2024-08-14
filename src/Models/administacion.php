@@ -15,16 +15,16 @@
     <div class="container">
         <div class="container-menu">
             <div class="perfil-hotel">
-                <img src="https://media.licdn.com/dms/image/C5603AQHspVjFZatw0A/profile-displayphoto-shrink_200_200/0/1517064065833?e=2147483647&v=beta&t=9XPDnNcafi8brTkNtU165Tka09qD19LDA6yKP5ogpkI" alt="hotel">
-                <h2>Hotel Las Américas</h2>
+                <img src="https://www.shutterstock.com/image-vector/sucre-bolivia-round-travel-stamp-260nw-1892814940.jpg" alt="hotel">
+                <h2>Hotel Sucre</h2>
             </div>
             <hr>
             <div class="menu-opciones">
                 <div class="opciones"><a href="">Habitaciones</a></div>
                 <div class="opciones"><a href="javascript:cargarContenido('reservas.php')">Reservas</a></div>
-                <div class="opciones"><a href="">Clientes</a></div>
+                <!-- <div class="opciones"><a href="">Clientes</a></div>
                 <div class="opciones"><a href="">Reportes</a></div>
-                <div class="opciones"><a href="">Administración</a></div>
+                <div class="opciones"><a href="">Administración</a></div> -->
             </div>
         </div>
 

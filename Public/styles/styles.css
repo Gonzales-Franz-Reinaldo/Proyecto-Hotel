@@ -1,0 +1,159 @@
+/* Reseteo de márgenes y paddings para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo de la página */
+body {
+    font-family: 'Lora', serif; /* Letra elegante y bonita */
+    color: #4A3B30; /* Color café oscuro */
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Estilo del encabezado */
+.container-encabezado {
+    background-image: url('../images//encabezado.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Altura ajustada */
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura sobre la imagen */
+    height: 100%;
+    padding: 30px 20px;
+}
+
+.hotel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hotel img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.titulo {
+    margin: 0;
+    font-size: 28px; /* Tamaño ajustado */
+    font-weight: bold;
+}
+
+.titulo a {
+    color: #FFF; /* Blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Barra de navegación al hacer scroll */
+.container-encabezado.fixed {
+    background-color: #1C3A4D; /* Color azul oscuro */
+    height: 60px;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    position: absolute;
+    top: 20px; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.secciones {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.secciones a {
+    color: #FFF8DC;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.secciones a:hover {
+    color: #CD853F; /* Mostaza claro para el hover */
+}
+
+/* Estilo del botón Rol */
+.roles {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.rol-boton {
+    background-color: #8B4513; /* Café intenso */
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo del contenedor principal de contenido */
+.container-medio {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo del pie de página */
+.container-pie {
+    background-color: #1C3A4D; /* Azul oscuro */
+    color: #FFF8DC;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-pie a {
+    color: #FFF8DC;
+    text-decoration: none;
+}
+
+.container-pie a:hover {
+    color: #CD853F; /* Mostaza claro */
+}
+
+/* Estilo para imágenes dentro del contenido */
+.hotel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.icon-admin {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 10px;
+}
