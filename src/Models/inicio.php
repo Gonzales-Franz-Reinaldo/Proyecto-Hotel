@@ -13,7 +13,8 @@
             Bienvenido al Hotel Sucre. Situado en el corazón vibrante de la ciudad, el Hotel Grand Vista ofrece una experiencia de lujo sin igual, combinando confort moderno con la calidez de un servicio excepcional. Nuestro hotel es la elección perfecta para aquellos que buscan una estancia sofisticada y conveniente, ya sea para un viaje de negocios, una escapada romántica, o unas vacaciones en familia.
         </p>
         <!--<img src="imagenes/contenido.jpg" alt="Imagen del hotel" class="img-center">-->
-        <img src="../../Public/images/contenido2.jpg" alt="Habitaciones" class="img-right">
+        <img src="./Public/images/contenido2.jpg" alt="Habitaciones" class="img-right">
+        <!-- <img src="https://hotel-independencia-sucre.hotelmix.es/data/Photos/OriginalPhoto/6850/685019/685019904/Hotel-Independencia-Sucre-Exterior.JPEG" alt="Habitaciones" class="img-right"> -->
         <p>
             <strong>Experiencia y Comodidades</strong><br>
             Desde el momento en que entras en nuestro vestíbulo de diseño elegante, serás recibido por un ambiente de tranquilidad y sofisticación. Cada uno de nuestros espacios ha sido cuidadosamente diseñado para proporcionar una experiencia de alojamiento inigualable:
@@ -22,16 +23,16 @@
         <p>
             <strong>Habitaciones Lujosas:</strong> Nuestras habitaciones, decoradas con un estilo contemporáneo y toques de elegancia, ofrecen un refugio cómodo y sereno. Elige entre una variedad de opciones, desde acogedoras habitaciones estándar hasta suites de lujo con vistas panorámicas de la ciudad. Cada habitación está equipada con camas de alta calidad, sábanas de algodón egipcio, y una selección de almohadas para garantizar una noche de descanso reparador.
         </p>
-        <img src="../../Public/images/contenido3.jpg" alt="Restaurante" class="img-right">
+        <img src="./Public/images/contenido3.jpg" alt="Restaurante" class="img-right">
         <p>
             <strong>Restaurante Gourmet:</strong> Disfruta de una experiencia culinaria de primer nivel en nuestro restaurante gourmet, donde nuestros chefs expertos preparan una variedad de platos internacionales y locales utilizando ingredientes frescos y de alta calidad. Desde un desayuno nutritivo hasta una cena elegante, nuestro restaurante ofrece un menú variado en un ambiente sofisticado.
         </p>
         <div class="clearfix"></div>
-        <img src="../../Public/images/contenido4.jpg" alt="Spa" class="img-center">
+        <img src="./Public/images/contenido4.jpg" alt="Spa" class="img-center">
         <p>
             <strong>Centro de Bienestar y Spa:</strong> Relájate y rejuvenece en nuestro centro de bienestar, que cuenta con un gimnasio completamente equipado, una sauna, y un spa de servicio completo. Ofrecemos una gama de tratamientos y masajes diseñados para revitalizar tu cuerpo y mente.
         </p>
-        <img src="../../Public/images/contenido5.jpg" alt="Piscina" class="img-right">
+        <img src="./Public/images/contenido5.jpg" alt="Piscina" class="img-right">
         <p>
             <strong>Piscina con Vistas:</strong> Disfruta de un baño refrescante en nuestra piscina al aire libre, que ofrece impresionantes vistas panorámicas de la ciudad. Ideal para relajarse bajo el sol o para una refrescante sesión de nado en cualquier época del año.
         </p>

@@ -18,8 +18,9 @@ if ($result->num_rows > 0) {
         echo '<p><strong>Válida desde:</strong> ' . htmlspecialchars($row['fecha_ini']) . ' hasta ' . htmlspecialchars($row['fecha_final']) . '</p>';
         echo '</div>';
         echo '<div class="promotion-footer">';
-        echo '<a href="javascript:cargarDetalles(\'./descripciones.php?id_promocion=' . $row['id_promocion'] . '\')" class="boton_detalles">Ver Detalles</a>';
-        echo '<a href="javascript:cargarConsultas(\'./consultas.php?id=' . $row['id_promocion'] . '\')" class="boton_consulta">Consultar</a>';
+        // echo '<a href="javascript:cargarDetalles(\'./descripciones.php?id_promocion=' . $row['id_promocion'] . '\')" class="boton_detalles">Ver Detalles</a>';
+        echo '<a href="javascript:cargarDetalles(\'./src/Models/descripciones.php?id_promocion=' . $row['id_promocion'] . '\')" class="boton_detalles">Ver Detalles</a>';
+        echo '<a href="javascript:cargarConsultas(\'./src/Models/consultas.php?id=' . $row['id_promocion'] . '\')" class="boton_consulta">Consultar</a>';
         echo '</div>';
         echo '</div>';
     }

@@ -9,10 +9,12 @@ if (isset($_GET['id_promocion'])) {
     $id_promocion = intval($_GET['id_promocion']);
     
     $query = "SELECT * FROM promocion WHERE id_promocion = ?";
+
     $stmt = $connect->prepare($query);
     if ($stmt === false) {
         die('Error en la preparación de la consulta: ' . $connect->error);
     }
+    
     $stmt->bind_param("i", $id_promocion);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -21,11 +23,11 @@ if (isset($_GET['id_promocion'])) {
         $row = $result->fetch_assoc();
         echo '<div class="detalle-promocion">';
         echo '<h2>' . htmlspecialchars($row['tipo_promocion']) . '</h2>';
-        echo '<img src="promociones/' . htmlspecialchars($row['imagen']) . '" alt="Imagen de la promoción">';
+        echo '<img src="./Public/images/promociones/' . htmlspecialchars($row['imagen']) . '" alt="Imagen de la promoción">';
         echo '<p>' . htmlspecialchars($row['descripcion_completa']) . '</p>';
         echo '<p><strong>Descuento:</strong> ' . htmlspecialchars($row['descuento']) . '%</p>';
         echo '<p><strong>Válida desde:</strong> ' . htmlspecialchars($row['fecha_ini']) . ' hasta ' . htmlspecialchars($row['fecha_final']) . '</p>';
-        echo '<div class="boton_consulta"><a href="javascript:cargarConsultas(\'consultas.php?id=' . $row['id_promocion'] . '\')">Consultar</a></div>';
+        echo '<div class="boton_consulta"><a href="javascript:cargarConsultas(\'./src/Models/consultas.php?id=' . $row['id_promocion'] . '\')">Consultar</a></div>';
         echo '</div>';
     } else {
         echo '<p>Detalles no disponibles.</p>';

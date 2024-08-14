@@ -17,10 +17,10 @@
             <div class="overlay">
                 <div class="hotel">
                     <img src="https://www.shutterstock.com/image-vector/sucre-bolivia-round-travel-stamp-260nw-1892814940.jpg" alt="logo_hotel">
-                    <div class="titulo"><a href="javascript:cargarPrincipal('./src/Models/inicio.html')">Hotel Sucre</a></div>
+                    <div class="titulo"><a href="javascript:cargarPrincipal('./src/Models/inicio.php')">Hotel Sucre</a></div>
                 </div>
                 <div class="menu">
-                    <div class="secciones"><a href="javascript:cargarPrincipal('./src/Models/inicio.html')">Inicio</a></div>
+                    <div class="secciones"><a href="javascript:cargarPrincipal('./src/Models/inicio.php')">Inicio</a></div>
                     <div class="secciones"><a href="javascript:cargarContenido('./src/Models/promociones.php')">Promociones</a></div>
                     <!-- <div class="secciones"><a href="#">Acerca de Nosotros</a></div>
                     <div class="secciones"><a href="#">Habitaciones</a></div> -->
@@ -28,7 +28,6 @@
                 </div>
                 <div class="roles">
                     <div class="rol-boton">
-                        <!-- jdsfpkds[fk[sdkk ]] -->
                         <a href="./src/Models/administacion.php">
                             <i class="fas fa-user-cog icon-admin"></i>
                         </a>
