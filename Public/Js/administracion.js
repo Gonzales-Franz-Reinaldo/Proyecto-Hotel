@@ -28,6 +28,8 @@ function confirmarReserva(reservaId) {
       })
       .then(response => response.json())
       .then(data => {
+
+        // cargarReservas('./reservas_recientes.php')
           if (data.success) {
               alert('Reserva confirmada y correo enviado.');
               // location.reload(); 

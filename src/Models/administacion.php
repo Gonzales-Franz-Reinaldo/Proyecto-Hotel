@@ -20,7 +20,7 @@
             </div>
             <hr>
             <div class="menu-opciones">
-                <div class="opciones"><a href="">Habitaciones</a></div>
+                <!-- <div class="opciones"><a href="">Habitaciones</a></div> -->
                 <div class="opciones"><a href="javascript:cargarContenido('reservas.php')">Reservas</a></div>
                 <!-- <div class="opciones"><a href="">Clientes</a></div>
                 <div class="opciones"><a href="">Reportes</a></div>
