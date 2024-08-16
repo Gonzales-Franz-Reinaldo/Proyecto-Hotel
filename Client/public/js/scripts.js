@@ -10,17 +10,6 @@ function cargarContenido(promocion) {
         .catch(error => console.error('Error al cargar el contenido:', error));
 }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     document.querySelector('.menu .secciones a[href="javascript:cargarContenido(\'index.php\')"]').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         cargarContenido('index.php');
-//     });
-
-//     document.querySelector('.menu .secciones a[href="javascript:cargarContenido(\'promociones.php\')"]').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         cargarContenido('promociones.php');
-//     });
-// });
 
 function cargarPrincipal(url) {
     var contenido = document.getElementById("contenido");

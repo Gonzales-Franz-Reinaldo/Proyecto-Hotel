@@ -1,6 +1,6 @@
 <?php
 
-include("../../Database/conexion.php");
+include("../../../Database/conexion.php");
 
 $sql = "SELECT * FROM reservas WHERE estado = 'Pendiente'";
 

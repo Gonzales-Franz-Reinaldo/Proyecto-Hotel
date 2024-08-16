@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recepcionista</title>
-    <link rel="stylesheet" href="../../Public/styles/admin/administracion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <script src="../../Public/Js/administracion.js"></script>
+    <link rel="stylesheet" href="../../public/css/administracion.css">
+    <script src="../../public/js/administracion.js"></script>
 </head>
 
 <body>
@@ -20,11 +20,11 @@
             </div>
             <hr>
             <div class="menu-opciones">
-                <!-- <div class="opciones"><a href="">Habitaciones</a></div> -->
-                <div class="opciones"><a href="javascript:cargarContenido('reservas.php')">Reservas</a></div>
-                <!-- <div class="opciones"><a href="">Clientes</a></div>
+                <div class="opciones"><a href="">Habitaciones</a></div>
+                <div class="opciones"><a href="javascript:cargarContenido('reservas.html')">Reservas</a></div>
+                <div class="opciones"><a href="">Clientes</a></div>
                 <div class="opciones"><a href="">Reportes</a></div>
-                <div class="opciones"><a href="">Administración</a></div> -->
+                <div class="opciones"><a href="">Administración</a></div>
             </div>
         </div>
 

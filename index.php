@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Public/styles/styles.css">
+    <link rel="stylesheet" href="./Client/public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <script src="./Public/Js/scripts.js"></script>
+    <script src="./Client/public/js/scripts.js"></script>
     <title>Hotel_Reservas</title>
 </head>
 
@@ -17,18 +17,17 @@
             <div class="overlay">
                 <div class="hotel">
                     <img src="https://www.shutterstock.com/image-vector/sucre-bolivia-round-travel-stamp-260nw-1892814940.jpg" alt="logo_hotel">
-                    <div class="titulo"><a href="javascript:cargarPrincipal('./src/Models/inicio.php')">Hotel Sucre</a></div>
+                    <div class="titulo"><a href="javascript:cargarPrincipal('./Client/src/views/inicio.html')">Hotel Sucre</a></div>
                 </div>
                 <div class="menu">
-                    <div class="secciones"><a href="javascript:cargarPrincipal('./src/Models/inicio.php')">Inicio</a></div>
-                    <div class="secciones"><a href="javascript:cargarContenido('./src/Models/promociones.php')">Promociones</a></div>
-                    <!-- <div class="secciones"><a href="#">Acerca de Nosotros</a></div>
-                    <div class="secciones"><a href="#">Habitaciones</a></div> -->
-                    <!-- <div></div> -->
+                    <div class="secciones"><a href="javascript:cargarPrincipal('./Client/src/views/inicio.html')">Inicio</a></div>
+                    <div class="secciones"><a href="javascript:cargarContenido('./Client/src/models/promociones.php')">Promociones</a></div>
+                    <div class="secciones"><a href="#">Acerca de Nosotros</a></div>
+                    <div class="secciones"><a href="#">Habitaciones</a></div>
                 </div>
                 <div class="roles">
                     <div class="rol-boton">
-                        <a href="./src/Models/administacion.php">
+                        <a href="./Admin/src/views/administacion.php">
                             <i class="fas fa-user-cog icon-admin"></i>
                         </a>
                     </div>
