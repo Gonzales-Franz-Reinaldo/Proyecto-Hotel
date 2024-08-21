@@ -32,6 +32,7 @@ if ($result->num_rows > 0) {
 $connect->close();
 ?>
 
+<<
 <style>
     #promotions {
         padding: 20px;

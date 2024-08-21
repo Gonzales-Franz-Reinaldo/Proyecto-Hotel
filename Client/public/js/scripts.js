@@ -85,5 +85,38 @@ window.onscroll = function() {
     }
 };
 
+function cargarInicioHabitaciones(url) {
+    var habitaciones = document.getElementById("contenido");
+
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            contenido.innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar las habitaciones:', error));
+}
+
+function cargarHabitaciones(url) {
+    var habitacionesL = document.getElementById("habitacionesLista");
+
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            habitacionesLista.innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar las habitaciones:', error));
+}
+
+function cargarDescripcionesH(url) {
+    var habitacionesL = document.getElementById("habitacionesLista");
+
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            habitacionesLista.innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el contenido:', error));
+}
+
 
 

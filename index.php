@@ -23,7 +23,7 @@
                     <div class="secciones"><a href="javascript:cargarPrincipal('./Client/src/views/inicio.html')">Inicio</a></div>
                     <div class="secciones"><a href="javascript:cargarContenido('./Client/src/models/promociones.php')">Promociones</a></div>
                     <div class="secciones"><a href="#">Acerca de Nosotros</a></div>
-                    <div class="secciones"><a href="#">Habitaciones</a></div>
+                    <div class="secciones"><a href="javascript:cargarInicioHabitaciones('./Client/src/models/tipos_habitaciones.php')">Habitaciones</a></div>
                 </div>
                 <div class="roles">
                     <div class="rol-boton">
