@@ -19,41 +19,200 @@ function cargarReservas(abrir) {
     });
 }
 
-
 //? PARA CONFIRMAR LA RESERVA POR CORREO
 function confirmarReserva(reservaId) {
-
   var contenido = document.getElementById("reserva-contenido");
 
   if (confirm("¿Estás seguro de que quieres confimar la reserva?")) {
-
     fetch(`../../src/controllers/confirmar_reserva.php?id=${reservaId}`)
       .then((response) => response.text())
       .then((data) => {
         contenido.innerHTML = data;
       });
 
-      alert("Reserva confirmada.");
-      cargarReservas('../../src/models/reservas_recientes.php');
-      
+    alert("Reserva confirmada.");
+    cargarReservas("../../src/models/reservas_recientes.php");
   }
 }
 
-//? PARA RECHAZAR LA RESERVA POR CORREO
+//? PARA RECHAZAR LA RESERVA
 function rechazarReserva(id) {
   var contenido = document.getElementById("reserva-contenido");
 
   if (confirm("¿Estás seguro de que quieres rechazar esta reserva?")) {
-
     fetch(`../../src/controllers/rechazar_reserva.php?id=${id}`)
       .then((response) => response.text())
       .then((data) => {
         contenido.innerHTML = data;
       });
 
-      alert("Reserva rechazada.");
-      cargarReservas('../../src/models/reservas_recientes.php');
-      
+    alert("Reserva rechazada.");
+    cargarReservas("../../src/models/reservas_recientes.php");
   }
-
 }
+
+// PARA GENERAR LA FACTURA DE LA RESERVA
+function generarFactura(id_reserva) {
+  var contenido = document.getElementById("reserva-contenido");
+
+  if (confirm("¿Desea generar la factura para este cliente?")) {
+    fetch(`../../src/controllers/generar_factura.php?id_reserva=${id_reserva}`)
+      .then((response) => response.text())
+      .then((data) => {
+        contenido.innerHTML = data;
+      });
+
+    alert("Factura generada.");
+    cargarReservas("../../src/models/historial_reserva.php");
+  }
+}
+
+
+function visualizarFactura(id_reserva) {
+  var contenido = document.getElementById("reserva-contenido"); 
+
+  fetch(`../../src/models/factura_pagos.php?id_reserva=${id_reserva}`)
+  .then((response) => response.text())
+  .then((data) => {
+    contenido.innerHTML = data;
+  })
+  .catch((error) => {
+    console.error("Error al cargar la factura:", error);
+  });
+}
+
+
+
+function printFactura() {
+  // Obtén el contenido del div con id "factura-container"
+  var facturaContent = document.getElementById("factura-container").innerHTML;
+
+  // Crea una nueva ventana en blanco
+  var printWindow = window.open("", "_blank", "width=800,height=600");
+
+  // Escribe el contenido HTML en la nueva ventana
+  printWindow.document.write(`
+      <html>
+      <head>
+          <title>Imprimir Factura</title>
+          <style>
+
+              body {
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+              }
+              .factura-container {
+                  background-color: white;
+                  padding: 20px;
+                  border-radius: 8px;
+                  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                  width: auto;
+              }
+
+              .factura-logo {
+                  text-align: left;
+              }
+
+              .factura-logo .logo {
+                  width: 70px;
+                  height: 70px;
+              }
+
+              .factura-header {
+                  text-align: center;
+                  margin-bottom: 20px;
+              }
+
+              .factura-header h1 {
+                  font-size: 32px;
+                  color: #333;
+              }
+
+              .factura-header p {
+                  margin: 5px 0;
+                  font-size: 14px;
+                  color: #666;
+              }
+
+              .factura-body {
+                  border-top: 2px solid #007bff;
+                  border-bottom: 2px solid #007bff;
+                  padding: 20px 0;
+                  margin-bottom: 20px;
+              }
+
+              .factura-body .factura-section {
+                  margin-bottom: 20px;
+              }
+
+              .factura-body .factura-section h2 {
+                  font-size: 18px;
+                  color: #007bff;
+                  margin-bottom: 10px;
+                  border-bottom: 1px solid #ddd;
+                  padding-bottom: 5px;
+              }
+
+              .factura-body .factura-section p {
+                  font-size: 14px;
+                  color: #333;
+                  margin: 4px 0;
+              }
+
+              .factura-body .factura-section .factura-table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  margin-bottom: 20px;
+              }
+
+              .factura-body .factura-section .factura-table th,
+              .factura-body .factura-section .factura-table td {
+                  border: 1px solid #ddd;
+                  padding: 8px;
+                  text-align: left;
+              }
+
+              .factura-body .factura-section .factura-table th {
+                  background-color: #f0f0f0;
+                  font-size: 14px;
+                  color: #333;
+              }
+
+              .factura-footer {
+                  text-align: center;
+                  padding-top: 10px;
+                  border-top: 1px solid #ddd;
+              }
+
+              .factura-footer p {
+                  font-size: 12px;
+                  color: #666;
+              }
+
+              .factura-footer strong {
+                  color: #333;
+              }
+
+          </style>
+      </head>
+      <body>
+          ${facturaContent}
+          <script>
+              // Ejecuta el comando de impresión automáticamente
+              window.print();
+              // Cierra la ventana después de imprimir
+              window.onafterprint = function() {
+                  window.close();
+              };
+          </script>
+      </body>
+      </html>
+  `);
+
+  // Cierra la escritura para que la impresión se pueda iniciar
+  printWindow.document.close();
+}
+
+
