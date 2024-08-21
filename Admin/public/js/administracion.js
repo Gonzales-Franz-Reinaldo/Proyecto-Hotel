@@ -69,6 +69,7 @@ function generarFactura(id_reserva) {
 
 
 function visualizarFactura(id_reserva) {
+  
   var contenido = document.getElementById("reserva-contenido"); 
 
   fetch(`../../src/models/factura_pagos.php?id_reserva=${id_reserva}`)

@@ -91,7 +91,7 @@ function cargarInicioHabitaciones(url) {
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            contenido.innerHTML = data;
+            habitaciones.innerHTML = data;
         })
         .catch(error => console.error('Error al cargar las habitaciones:', error));
 }
@@ -102,7 +102,7 @@ function cargarHabitaciones(url) {
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            habitacionesLista.innerHTML = data;
+            habitacionesL.innerHTML = data;
         })
         .catch(error => console.error('Error al cargar las habitaciones:', error));
 }
@@ -113,7 +113,7 @@ function cargarDescripcionesH(url) {
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            habitacionesLista.innerHTML = data;
+            habitacionesL.innerHTML = data;
         })
         .catch(error => console.error('Error al cargar el contenido:', error));
 }
