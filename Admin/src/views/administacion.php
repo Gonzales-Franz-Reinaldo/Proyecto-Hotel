@@ -15,7 +15,7 @@
     <div class="container">
         <div class="container-menu">
             <div class="perfil-hotel">
-                <img src="https://www.shutterstock.com/image-vector/sucre-bolivia-round-travel-stamp-260nw-1892814940.jpg" alt="hotel">
+                <img src="../../public/images/logo_hotel.png" alt="hotel">
                 <h2>Hotel Sucre</h2>
             </div>
             <hr>
@@ -23,7 +23,7 @@
                 <div class="opciones"><a href="">Habitaciones</a></div>
                 <div class="opciones"><a href="javascript:cargarContenido('reservas.html')">Reservas</a></div>
                 <div class="opciones"><a href="">Clientes</a></div>
-                <div class="opciones"><a href="">Reportes</a></div>
+                <!-- <div class="opciones"><a href="">Reportes</a></div> -->
                 <div class="opciones"><a href="">Administración</a></div>
             </div>
         </div>

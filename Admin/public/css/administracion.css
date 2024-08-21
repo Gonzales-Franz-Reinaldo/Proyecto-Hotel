@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -160,6 +161,124 @@ body {
   height: 500px;
   border-radius: 10px;
 }
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas {
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #343a40;
+  animation: fadeIn 1s ease-in-out;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  overflow-y: scroll;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 15px;
+  width: 480px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card:hover {
+  transform: translateY(-5px);
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .detalles {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .detalles .datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .detalles .cliente {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .detalles .cliente p {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #495057;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .detalles .cliente i {
+  font-size: 5.5em;
+  color: #007bff;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #007bff;
+  animation: fadeInDown 1s ease-in-out;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #495057;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .acciones {
+  margin-top: 15px;
+  text-align: right;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .acciones button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .acciones button:hover {
+  transform: scale(1.05);
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .acciones button:active {
+  transform: scale(1);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .acciones .generar-factura-btn {
+  background-color: #28a745;
+}
+.container .container-main .contenido .reservas .reserva-contenido .historial-reservas .reservas-lista .reserva-card .acciones .visualizar-factura-btn {
+  background-color: #17a2b8;
+}
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes {
   display: flex;
   flex-direction: column;
@@ -272,6 +391,120 @@ body {
 }
 .container .container-main .contenido .reservas .reserva-contenido .reservas-pendientes .reservas-container .reserva-card .acciones .cancel-btn:hover {
   background-color: #c82333;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: auto;
+  /* Diseño adicional opcional para darle más vida */
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-logo {
+  text-align: left;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-logo .logo {
+  width: 70px;
+  height: 70px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-header h1 {
+  font-size: 32px;
+  color: #333;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-header p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-body {
+  border-top: 2px solid #007bff;
+  border-bottom: 2px solid #007bff;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-body .factura-section {
+  margin-bottom: 20px;
+  /* Estilos para las tablas de datos */
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-body .factura-section h2 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-body .factura-section p {
+  font-size: 14px;
+  color: #333;
+  margin: 4px 0;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-body .factura-section .factura-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-body .factura-section .factura-table th, .container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-body .factura-section .factura-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-body .factura-section .factura-table th {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-footer {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-footer p {
+  font-size: 12px;
+  color: #666;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-container .factura-footer strong {
+  color: #333;
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-print .print-button {
+  background-color: #28a745; /* Color verde elegante */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-print .print-button:hover {
+  background-color: #218838; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-print .print-button i {
+  margin-right: 10px;
+  font-size: 22px; /* Tamaño del icono */
+}
+.container .container-main .contenido .reservas .reserva-contenido .factura-contenido .factura-print .print-button:active {
+  background-color: #1e7e34; /* Color cuando se hace clic */
+  transform: scale(1); /* Remover el zoom al hacer clic */
 }
 .container .container-main footer {
   background: rgb(36, 171, 238);
