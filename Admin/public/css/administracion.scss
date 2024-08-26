@@ -5,12 +5,10 @@
     font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
     height: 100vh;
     width: 100%;
 }
-
-
 
 .container {
     width: 100%;
@@ -19,7 +17,7 @@ body{
     flex-direction: row;
 
     .container-menu {
-        width: 20%;
+        width: 17%;
         height: 100%;
         padding: 5px;
         padding-top: 10px;
@@ -72,19 +70,16 @@ body{
         }
     }
 
-
-
     .container-main {
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 83%;
         height: 100%;
-
 
         .menu-navegacion {
             display: flex;
             justify-content: space-between;
-            height: 10%;
+            height: 9%;
             background: rgb(34, 75, 142);
             padding: 5px;
             justify-content: center;
@@ -92,23 +87,24 @@ body{
             gap: 10px;
 
             .home-link {
-                text-decoration: none; 
-                font-size: 24px; 
-                color: #1e1e1e; 
-                display: inline-flex; 
+                text-decoration: none;
+                font-size: 24px;
+                color: #1e1e1e;
+                display: inline-flex;
                 align-items: center;
-                transition: transform 0.3s ease, color 0.3s ease; 
+                transition:
+                    transform 0.3s ease,
+                    color 0.3s ease;
 
                 i {
-                    margin-right: 8px; 
+                    margin-right: 8px;
                 }
 
                 &:hover {
-                    transform: scale(1.1); 
-                    color: #3c95f5; 
+                    transform: scale(1.1);
+                    color: #3c95f5;
                 }
             }
-            
 
             p {
                 a {
@@ -125,16 +121,11 @@ body{
 
                 img {
                     width: 50px;
-                    height: 60px;
+                    height: 50px;
                     border-radius: 50%;
                 }
             }
         }
-
-
-
-
-
 
         // TODO EL CONTENIDO QUE SE VEA EN EL CONTENIDO PRINCIPAL
         .contenido {
@@ -142,8 +133,7 @@ body{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 82%;
-
+            height: 84%;
 
             //? PARA LAS RESERVAS QUE EL RECEPCIONISTA VA A VER
             .reservas {
@@ -153,8 +143,6 @@ body{
                 align-items: center;
                 flex-direction: column;
 
-
-
                 .menu-navigation {
                     display: flex;
                     justify-content: center;
@@ -162,7 +150,7 @@ body{
                     padding: 5px;
                     gap: 20px;
                     width: 100%;
-                    height: 10%;
+                    height: 8%;
                     background: rgba(30, 130, 172, 0.853);
 
                     ul {
@@ -209,23 +197,145 @@ body{
                         border-radius: 10px;
                     }
 
-
                     //? PARA MOSTRAR EL HISTORIAL DE LAS RESERVAS
                     .historial-reservas {
-                        padding: 20px;
+                        padding: 5px;
                         background-color: #f8f9fa;
                         margin: 0 auto;
                         width: 100%;
                         height: 100%;
                         display: flex;
                         flex-direction: column;
-                        gap: 20px;
-                        
+                        gap: 10px;
+
                         h1 {
                             text-align: center;
                             font-size: 2em;
                             color: #343a40;
                             animation: fadeIn 1s ease-in-out;
+                            // background: #0056b3;
+                        }
+
+                        .buscar-reservas {
+                            justify-content: space-between;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 10px;
+                            width: 100%;
+                            background-color: #ffffff;
+                            border-radius: 10px;
+                            box-shadow: 0 5px 8px rgba(14, 50, 208, 0.234);
+
+                            #formBusqueda {
+                                width: 60%;
+                                display: flex;
+                                gap: 15px;
+                                justify-content: center;
+                                align-items: center;
+
+                                .input-contenedor {
+                                    position: relative;
+                                    width: 100%;
+                                    max-width: 400px;
+
+                                    .input-busqueda {
+                                        width: 100%;
+                                        padding: 10px 20px 10px 40px; /* Espacio para el icono a la derecha */
+                                        border: 1px solid #ddd;
+                                        border-radius: 5px;
+                                        font-size: 16px;
+                                    }
+
+                                    .icono-busqueda {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 15px; /* Ajusta según sea necesario */
+                                        transform: translateY(-50%);
+                                        color: #888; /* Color del icono */
+                                        cursor: pointer;
+                                        font-size: 16px;
+                                    }
+                                }
+                                /* Icono de búsqueda más grande en pantallas pequeñas */
+                                @media (max-width: 768px) {
+                                    .icono-busqueda {
+                                        font-size: 18px;
+                                        right: 10px; /* Ajusta según sea necesario */
+                                    }
+                                }
+
+                                .fecha-rango {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                }
+
+                                .input-fecha {
+                                    padding: 8px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                }
+
+                                .fecha-reserva {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                }
+
+                                .btn-buscar {
+                                    padding: 10px 20px;
+                                    background-color: #007bff;
+                                    color: #ffffff;
+                                    border: none;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                    transition: background-color 0.3s ease;
+
+                                    &:hover {
+                                        background-color: #0056b3;
+                                    }
+                                }
+                            }
+
+                            .opciones-ordenacion {
+                                width: 40%;
+                                display: flex;
+                                gap: 15px;
+                                justify-content: center;
+                                align-items: center;
+
+                                .select-ordenar {
+                                    padding: 8px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                    width: 100%;
+                                    max-width: 200px;
+                                }
+                            }
+                        }
+
+                        /* Responsivo */
+                        @media (max-width: 768px) {
+                            .buscar-reservas {
+                                max-width: 95%;
+                                padding: 15px;
+                            }
+
+                            .input-busqueda,
+                            .select-ordenar,
+                            .input-fecha {
+                                width: 100%;
+                                max-width: none;
+                            }
+
+                            #formBusqueda,
+                            .opciones-ordenacion {
+                                flex-direction: column;
+                            }
                         }
 
                         .reservas-lista {
@@ -233,7 +343,7 @@ body{
                             flex-wrap: wrap;
                             gap: 15px;
                             justify-content: center;
-                            // Generar scroll vertical 
+                            // Generar scroll vertical
                             overflow-y: scroll;
 
                             .reserva-card {
@@ -242,7 +352,6 @@ body{
                                 border-radius: 8px;
                                 padding: 15px;
                                 width: 480px;
-                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                                 transition: transform 0.3s ease;
                                 display: flex;
                                 flex-direction: column;
@@ -251,7 +360,7 @@ body{
                                     transform: translateY(-5px);
                                 }
 
-                                .detalles{
+                                .detalles {
                                     display: flex;
                                     padding: 5px;
                                     justify-content: space-between;
@@ -259,14 +368,14 @@ body{
                                     // justify-content: center;
                                     // align-items: center;
 
-                                    .datos{
+                                    .datos {
                                         display: flex;
                                         flex-direction: column;
                                         justify-content: center;
                                         // align-items: center;
                                     }
 
-                                    .cliente{
+                                    .cliente {
                                         display: flex;
                                         flex-direction: column;
                                         justify-content: center;
@@ -279,7 +388,7 @@ body{
                                             color: #495057;
                                         }
 
-                                        i{
+                                        i {
                                             font-size: 5.5em;
                                             color: #007bff;
                                         }
@@ -310,7 +419,9 @@ body{
                                         font-size: 1em;
                                         cursor: pointer;
                                         color: #ffffff;
-                                        transition: background-color 0.3s ease, transform 0.2s ease;
+                                        transition:
+                                            background-color 0.3s ease,
+                                            transform 0.2s ease;
 
                                         &:hover {
                                             transform: scale(1.05);
@@ -319,7 +430,7 @@ body{
                                         &:active {
                                             transform: scale(1);
                                         }
-                                    
+
                                         @keyframes fadeIn {
                                             from {
                                                 opacity: 0;
@@ -328,7 +439,7 @@ body{
                                                 opacity: 1;
                                             }
                                         }
-                                    
+
                                         @keyframes fadeInDown {
                                             from {
                                                 opacity: 0;
@@ -348,31 +459,33 @@ body{
                                     .visualizar-factura-btn {
                                         background-color: #17a2b8;
                                     }
-                                
-                                
                                 }
                             }
                         }
                     }
 
-
-
-
-
-
-
-
-                    
                     //? PARA MOSTRAR LAS RESERVAS DE LOS CLIENTES PENDIENTES
                     .reservas-pendientes {
+                        width: 100%;
+                        background-color: #ffffff;
+                        padding: 10px;
+                        text-align: center;
+                        // margin-top: 30px;
+                        height: 100%;
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                        gap: 10px;
-                        height: 100%;
-                        // overflow-y: scroll;
+                        animation: fadeIn 0.3s ease-in-out;
+
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(20px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
 
                         h1 {
                             text-align: center;
@@ -381,92 +494,207 @@ body{
                             font-size: 28px;
                         }
 
+                        .buscar-reservas {
+                            justify-content: space-between;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 10px;
+                            width: 100%;
+                            background-color: #ffffff;
+                            border-radius: 10px;
+                            box-shadow: 0 5px 8px rgba(14, 50, 208, 0.234);
+
+                            #formBusqueda {
+                                width: 60%;
+                                display: flex;
+                                gap: 15px;
+                                justify-content: center;
+                                align-items: center;
+
+                                .input-contenedor {
+                                    position: relative;
+                                    width: 100%;
+                                    max-width: 400px;
+
+                                    .input-busqueda {
+                                        width: 100%;
+                                        padding: 10px 20px 10px 40px; /* Espacio para el icono a la derecha */
+                                        border: 1px solid #ddd;
+                                        border-radius: 5px;
+                                        font-size: 16px;
+                                    }
+
+                                    .icono-busqueda {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 15px; /* Ajusta según sea necesario */
+                                        transform: translateY(-50%);
+                                        color: #888; /* Color del icono */
+                                        cursor: pointer;
+                                        font-size: 16px;
+                                    }
+                                }
+                                /* Icono de búsqueda más grande en pantallas pequeñas */
+                                @media (max-width: 768px) {
+                                    .icono-busqueda {
+                                        font-size: 18px;
+                                        right: 10px; /* Ajusta según sea necesario */
+                                    }
+                                }
+
+                                .fecha-rango {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                }
+
+                                .input-fecha {
+                                    padding: 8px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                }
+
+                                .fecha-reserva {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                }
+
+                                .btn-buscar {
+                                    padding: 10px 20px;
+                                    background-color: #007bff;
+                                    color: #ffffff;
+                                    border: none;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                    transition: background-color 0.3s ease;
+
+                                    &:hover {
+                                        background-color: #0056b3;
+                                    }
+                                }
+                            }
+
+                            .opciones-ordenacion {
+                                width: 40%;
+                                display: flex;
+                                gap: 15px;
+                                justify-content: center;
+                                align-items: center;
+
+                                .select-ordenar {
+                                    padding: 8px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                    width: 100%;
+                                    max-width: 200px;
+                                }
+                            }
+                        }
+
+                        /* Responsivo */
+                        @media (max-width: 768px) {
+                            .buscar-reservas {
+                                max-width: 95%;
+                                padding: 15px;
+                            }
+
+                            .input-busqueda,
+                            .select-ordenar,
+                            .input-fecha {
+                                width: 100%;
+                                max-width: none;
+                            }
+
+                            #formBusqueda,
+                            .opciones-ordenacion {
+                                flex-direction: column;
+                            }
+                        }
+
                         .reservas-container {
                             display: flex;
                             flex-wrap: wrap;
-                            justify-content: center;
                             gap: 20px;
-                            padding-bottom: 20px;
-                            width: 100%;
+                            justify-content: center;
                             overflow-y: scroll;
-
+                            margin-top: 15px;
 
                             .reserva-card {
-                                margin-top: 5px;
-                                background-color: #fff;
-                                width: 90%;
-                                display: flex;
-                                flex-direction: column;
-                                padding: 15px;
+                                background-color: #ffffff;
+                                border: 1px solid #e2e8f0;
                                 border-radius: 10px;
-                                background: #93ecdd81;
-                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                width: 100%;
+                                max-width: 350px;
+                                padding: 20px;
                                 transition:
-                                    transform 0.3s,
-                                    box-shadow 0.3s;
-                                height: 350px;
+                                    transform 0.3s ease,
+                                    box-shadow 0.3s ease;
+                                cursor: pointer;
 
                                 &:hover {
-                                    transform: translateY(-10px);
-                                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                                    transform: translateY(-5px);
+                                    box-shadow: 0 8px 12px rgba(14, 49, 208, 0.204);
                                 }
 
                                 .text_reserva {
-                                    font-size: 24px;
-                                    margin-bottom: 10px;
-                                    color: rgb(5, 130, 5);
-                                    text-align: center;
+                                    font-size: 1.5rem;
+                                    margin-bottom: 15px;
+                                    color: #007bff;
                                 }
 
-                                .datos-reserva{
+                                .datos-reserva {
                                     display: flex;
-                                    width: 100%;
-                                    justify-content: space-between;
-                                    gap: 10px;
-                                    padding: 10px;
+                                    flex-direction: column;
+                                    gap: 20px;
+                                    text-align: left;
 
-                                    .datos{
-                                        display: flex;
-                                        flex-direction: column;
-                                        gap: 5px;
-                                        padding: 10px;
+                                    .datos {
+                                        background-color: #f9fafb;
+                                        padding: 15px;
+                                        border-radius: 8px;
+                                        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 
-                                        h2{
-                                            text-align: center;
-                                            color: rgb(29, 72, 213);
+                                        h2 {
+                                            font-size: 1.2rem;
+                                            margin-bottom: 10px;
+                                            color: #374151;
                                         }
                                         p {
-                                            font-size: 16px;
                                             margin: 5px 0;
-                                            color: #555;
+                                            font-size: 0.9rem;
+                                            color: #4b5563;
                                         }
                                     }
 
-                                    .detalles-reserva{
-                                        display: flex;
-                                        flex-direction: column;
-                                        padding: 10px;
-                                        gap: 5px;
+                                    .detalles-reserva {
+                                        background-color: #f9fafb;
+                                        padding: 15px;
+                                        border-radius: 8px;
+                                        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 
-                                        h2{
-                                            text-align: center;
-                                            color: rgb(29, 72, 213);
+                                        h2 {
+                                            font-size: 1.2rem;
+                                            margin-bottom: 10px;
+                                            color: #374151;
                                         }
                                         p {
-                                            font-size: 16px;
                                             margin: 5px 0;
-                                            color: #555;
+                                            font-size: 0.9rem;
+                                            color: #4b5563;
                                         }
                                     }
                                 }
 
                                 .acciones {
-                                    margin-top: 10px;
                                     display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-around;
-                                    align-items: center;
-                                    padding: 10px;
+                                    justify-content: space-between;
+                                    gap: 10px;
+                                    margin-top: 20px;
 
                                     button {
                                         padding: 10px 15px;
@@ -476,200 +704,183 @@ body{
                                         cursor: pointer;
                                         transition: background-color 0.3s;
                                     }
-                                    
 
                                     .confirm-btn {
-                                        background-color: #28a745;
-                                        color: white;
+                                        width: 45%;
+                                        padding: 10px;
+                                        font-size: 0.9rem;
+                                        border-radius: 5px;
+                                        border: none;
+                                        cursor: pointer;
+                                        transition:
+                                            background-color 0.3s ease,
+                                            color 0.3s ease;
+                                        background-color: #38a169; /* Verde para confirmar */
+                                        color: #ffffff;
 
                                         &:hover {
                                             background-color: #218838;
                                         }
-                                        
-                                        
                                     }
-                                    
 
                                     .cancel-btn {
-                                        background-color: #dc3545;
-                                        color: white;
+                                        width: 45%;
+                                        padding: 10px;
+                                        font-size: 0.9rem;
+                                        border: none;
+                                        border-radius: 5px;
+                                        cursor: pointer;
+                                        transition:
+                                            background-color 0.3s ease,
+                                            color 0.3s ease;
+                                        background-color: #e53e3e; /* Rojo para rechazar */
+                                        color: #ffffff;
 
                                         &:hover {
                                             background-color: #c82333;
                                         }
                                     }
                                 }
-                                
+                            }
+                        }
+
+                        @media (max-width: 768px) {
+                            .reservas-container {
+                                flex-direction: column;
+                                align-items: center;
+                            }
+
+                            .reserva-card {
+                                width: 100%;
+                                max-width: none;
                             }
                         }
                     }
 
-
                     //? PARA MOSTRAR LAS FACTURAS DE LAS RESERVAS
-                    .factura-contenido{
+
+                    .factura-contenido {
                         display: flex;
                         flex-direction: column;
-                        // justify-content: center;
                         align-items: center;
                         gap: 20px;
                         padding: 20px;
                         width: 100%;
                         height: 100%;
                         overflow-y: scroll;
-
+                        font-family: Arial, sans-serif;
+                        background-color: #f9f9f9;
+                    
                         .factura-container {
-                            background-color: white;
                             padding: 20px;
-                            border-radius: 8px;
-                            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-                            width: auto;
-
-                            /* Diseño adicional opcional para darle más vida */
-                            .factura-logo {
-                                text-align: left;
-                                // margin-bottom: 20px;
-
-                                .logo {
-                                    width: 70px;
-                                    height: 70px;
-                                }
-
-                            }
-
+                            box-shadow: 0 5px 8px rgba(14, 50, 208, 0.234);
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                    
                             .factura-header {
-                                text-align: center;
+                                display: flex;
+                                justify-content: space-between;
+                                border-bottom: 2px solid #005f91;
+                                padding-bottom: 10px;
                                 margin-bottom: 20px;
-
-                                h1 {
-                                    font-size: 32px;
-                                    color: #333;
+                    
+                                .factura-logo img {
+                                    max-width: 130px;
+                                    height: auto;
                                 }
-
-                                p {
-                                    margin: 5px 0;
-                                    font-size: 14px;
-                                    color: #666;
+                    
+                                .factura-info {
+                                    h1 {
+                                        font-size: 24px;
+                                        color: #005f91;
+                                        margin-bottom: 10px;
+                                    }
+                    
+                                    p {
+                                        margin: 0;
+                                        font-size: 14px;
+                                    }
                                 }
                             }
-                            
+                    
                             .factura-body {
-                                border-top: 2px solid #007bff;
-                                border-bottom: 2px solid #007bff;
-                                padding: 20px 0;
                                 margin-bottom: 20px;
-
+                    
                                 .factura-section {
                                     margin-bottom: 20px;
-
+                    
                                     h2 {
                                         font-size: 18px;
-                                        color: #007bff;
-                                        margin-bottom: 10px;
-                                        border-bottom: 1px solid #ddd;
-                                        padding-bottom: 5px;
+                                        background-color: #005f91;
+                                        color: white;
+                                        padding: 5px;
+                                        margin: 0;
                                     }
-
-                                    p {
-                                        font-size: 14px;
-                                        color: #333;
-                                        margin: 4px 0;
-                                    }
-
-                                    /* Estilos para las tablas de datos */
-                                    .factura-table {
-                                        width: 100%;
-                                        border-collapse: collapse;
-                                        margin-bottom: 20px;
-
-                                        th, td {
-                                            border: 1px solid #ddd;
-                                            padding: 8px;
-                                            text-align: left;
-                                        }
-
-                                        th {
-                                            background-color: #f0f0f0;
-                                            font-size: 14px;
-                                            color: #333;
+                    
+                                    .factura-column {
+                                        display: grid;
+                                        grid-template-columns: 2fr 2fr; /* Ajusta la proporción entre el label y el valor */
+                                        gap: 20px; /* Espacio entre las columnas */
+                                        padding: 8px;
+                                        align-items: center; /* Alinea verticalmente los elementos */
+                    
+                                        p {
+                                            margin: 4px 0;
+                                            font-size: 15px;
+                                            display: flex;
+                                            justify-content: space-between;
                                         }
                                     }
-                                
-                                }
-                            }
-
-                            .factura-footer {
-                                text-align: center;
-                                padding-top: 10px;
-                                border-top: 1px solid #ddd;
-
-                                p {
-                                    font-size: 12px;
-                                    color: #666;
-                                }
-
-                                strong {
-                                    color: #333;
                                 }
                             }
                         }
+                    
+                        .factura-footer {
+                            text-align: center;
+                            margin-top: 20px;
+                            font-size: 14px;
+                            border-top: 2px solid #005f91;
+                            padding-top: 10px;
+                        }
+                    }
+                    
 
 
-                        .factura-print{
+                    .factura-print {
+                        text-align: center;
+                        margin-top: 20px;
 
-                            .print-button {
-                                background-color: #28a745; /* Color verde elegante */
-                                color: white;
-                                padding: 12px 25px;
-                                border: none;
-                                border-radius: 5px;
-                                font-size: 18px;
-                                font-weight: bold;
-                                text-align: center;
-                                cursor: pointer;
-                                display: inline-flex;
-                                align-items: center;
-                                transition: background-color 0.3s ease, transform 0.2s ease;
-                                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+                        .print-button {
+                            background-color: #005f91;
+                            color: white;
+                            border: none;
+                            padding: 10px 20px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            transition: background-color 0.3s;
 
-                                &:hover {
-                                    background-color: #218838; /* Color más oscuro al pasar el mouse */
-                                    transform: scale(1.05); /* Efecto de zoom */
-                                }
-
-                                i {
-                                    margin-right: 10px;
-                                    font-size: 22px; /* Tamaño del icono */
-                                }
-
-                                &:active {
-                                    background-color: #1e7e34; /* Color cuando se hace clic */
-                                    transform: scale(1); /* Remover el zoom al hacer clic */
-                                }
+                            &:hover {
+                                background-color: #003f5c;
                             }
                         }
                     }
-
-
                 }
             }
         }
+    }
 
+    footer {
+        background: rgb(36, 171, 238);
+        width: 100%;
+        padding: 20px;
+        // margin-top: auto;
+        height: 7%;
 
-
-        footer {
-            background: rgb(36, 171, 238);
-            width: 100%;
-            padding: 20px;
-            // margin-top: auto;
-            height: 8%;
-
-            p {
-                color: white;
-                text-align: center;
-                font-size: 18px;
-            }
+        p {
+            color: white;
+            text-align: center;
+            font-size: 18px;
         }
     }
 }
-
-

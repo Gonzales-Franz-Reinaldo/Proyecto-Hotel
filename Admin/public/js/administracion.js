@@ -217,3 +217,113 @@ function printFactura() {
 }
 
 
+function generatePDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF('p', 'mm', 'a4');
+
+  // Selecciona el elemento que contiene la factura
+  const content = document.getElementById('factura-container');
+
+  // Aumenta la escala para mejorar la calidad
+  html2canvas(content, { scale: 2 }).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+
+      // Calcular las dimensiones para ajustar a A4
+      const imgWidth = 210; // Ancho de A4 en mm
+      const pageHeight = 297; // Altura de A4 en mm
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      let heightLeft = imgHeight;
+
+      let position = 0;
+
+      // Añadir la imagen al PDF
+      doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+
+      // Si la imagen excede la altura de la página, agregar otra página
+      while (heightLeft >= 0) {
+          position = heightLeft - imgHeight;
+          doc.addPage();
+          doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+      }
+
+      // Guarda el PDF
+      doc.save('factura_pago.pdf');
+  }).catch((error) => {
+      console.error('Error al generar el PDF', error);
+  });
+}
+
+
+
+
+
+
+function realizarBusqueda(){
+  var busqueda = document.getElementById("busquedaDatos").value;
+  var fechaReserva = document.getElementById("fechaReserva").value;
+
+  cargarReservas(`../../src/models/historial_reserva.php?busquedaGeneral=${busqueda}&fechaReserva=${fechaReserva}`);
+  
+}
+
+const ordenarPorTipoHabitacion = () =>{
+  var tipoHabitacion = document.getElementById("tipoHabitacion").value;
+  
+  cargarReservas(`../../src/models/historial_reserva.php?tipoHabitacion=${tipoHabitacion}`)
+} 
+
+const ordenarPorTipo = () =>{
+  let ordenarTipo = document.getElementById("ordenarTipo").value;
+  let tipoOrdenar = document.getElementsByClassName(`${ordenarTipo}`);
+  var contenido = document.getElementById("reserva-contenido");
+
+  fetch(`../../src/models/historial_reserva.php?ordenarTipo=${ordenarTipo}`)
+    .then((response) => response.text())
+    .then((data) => {
+
+      contenido.innerHTML = data;
+      // Iteramos sobre los elementos de tipoOrdenar
+      for (let i = 0; i < tipoOrdenar.length; i++) {
+        tipoOrdenar[i].style.color = "black";
+        tipoOrdenar[i].style.fontWeight = "bold";
+      }
+    });
+
+}
+
+
+// PARA LAS RESERVAS RECIENTES 
+function realizarBusqueda2(){
+  var busqueda = document.getElementById("busquedaDatos").value;
+  var fechaReserva = document.getElementById("fechaReserva").value;
+
+  cargarReservas(`../../src/models/reservas_recientes.php?busquedaGeneral=${busqueda}&fechaReserva=${fechaReserva}`);
+  
+}
+const ordenarPorTipoHabitacion2 = () =>{
+  var tipoHabitacion = document.getElementById("tipoHabitacion").value;
+  
+  cargarReservas(`../../src/models/reservas_recientes.php?tipoHabitacion=${tipoHabitacion}`)
+} 
+
+
+const ordenarPorTipo2 = () =>{
+  let ordenarTipo = document.getElementById("ordenarTipo").value;
+  let tipoOrdenar = document.getElementsByClassName(`${ordenarTipo}`);
+  var contenido = document.getElementById("reserva-contenido");
+
+  fetch(`../../src/models/reservas_recientes.php?ordenarTipo=${ordenarTipo}`)
+    .then((response) => response.text())
+    .then((data) => {
+
+      contenido.innerHTML = data;
+      // Iteramos sobre los elementos de tipoOrdenar
+      for (let i = 0; i < tipoOrdenar.length; i++) {
+        tipoOrdenar[i].style.color = "black";
+        tipoOrdenar[i].style.fontWeight = "bold";
+      }
+    });
+
+}

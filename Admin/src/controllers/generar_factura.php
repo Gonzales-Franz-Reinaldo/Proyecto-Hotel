@@ -2,6 +2,7 @@
 
 include("../../../Database/conexion.php");
 
+
 if (isset($_GET['id_reserva'])) {
 
     $id_reserva = $_GET['id_reserva'];
@@ -27,7 +28,6 @@ if (isset($_GET['id_reserva'])) {
 
         $sql = "INSERT INTO factura_pago (id, fecha_emision, sub_total, descuento_aplicado, monto_total, id_reserva) 
         VALUES (NULL, '$fecha_emision', $sub_total, $descuento_aplicado, $monto_total, $id_reserva)";
-
 
         if ($connect->query($sql) === TRUE) {
             // echo "Factura generada con éxito";
