@@ -118,5 +118,87 @@ function cargarDescripcionesH(url) {
         .catch(error => console.error('Error al cargar el contenido:', error));
 }
 
+function cargarFormulario(url) {
+    var habitacionesL = document.getElementById("contenido");
+
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            habitacionesL.innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el contenido:', error));
+}
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const promocionSelect = document.getElementById('promocion');
+//     const precioNocheElem = document.getElementById('precio_noche');
+//     const precioTotalElem = document.getElementById('precio_total');
+//     const detallePromocionElem = document.getElementById('detalle_promocion');
+
+//     promocionSelect.addEventListener('change', () => {
+//         const selectedOption = promocionSelect.options[promocionSelect.selectedIndex];
+//         const descuento = parseFloat(selectedOption.getAttribute('data-descuento')) || 0;
+//         const precioNoche = parseFloat(precioNocheElem.textContent);
+//         let precioTotal = precioNoche;
+
+//         if (descuento > 0) {
+//             precioTotal = precioNoche - (precioNoche * (descuento / 100));
+//             detallePromocionElem.textContent = selectedOption.textContent;
+//         } else {
+//             detallePromocionElem.textContent = 'Ninguna';
+//         }
+
+//         precioTotalElem.textContent = precioTotal.toFixed(2);
+//     });
+// });
+
+
+
+/* document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.seleccionar-promocion').forEach(button => {
+        button.addEventListener('click', () => {
+            const promoId = button.getAttribute('data-id');
+            const promoItem = button.closest('.promocion-item');
+            
+            // Actualizar el valor del radio button correspondiente
+            document.querySelector(`input[name="id_promocion"][value="${promoId}"]`).checked = true;
+            
+            // Actualizar el detalle de la reserva
+            const descripcion = promoItem.querySelector('p').innerText;
+            const descuento = promoItem.querySelector('p:nth-of-type(2)').innerText;
+            
+            document.getElementById('descuento').innerText = descuento;
+            // Calcula el nuevo total con descuento aplicado
+            const precioPorNoche = parseFloat(document.getElementById('total-precio').innerText);
+            const nuevoTotal = precioPorNoche - (precioPorNoche * parseFloat(descuento) / 100);
+            document.getElementById('total-precio').innerText = nuevoTotal.toFixed(2);
+        });
+    });
+});
+ */
+
+
+/* document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.seleccionar-promocion').forEach(button => {
+        button.addEventListener('click', () => {
+            const promoId = button.getAttribute('data-id');
+            const promoItem = button.closest('.promocion-item');
+
+            // Actualizar el valor del radio button correspondiente
+            document.querySelector(`input[name="id_promocion"][value="${promoId}"]`).checked = true;
+
+            // Actualizar el detalle de la reserva
+            const descripcion = promoItem.querySelector('p').innerText;
+            const descuento = promoItem.querySelector('p:nth-of-type(2)').innerText.replace('Descuento: ', '').replace('%', '');
+
+            document.getElementById('descuento').innerText = descuento + '%';
+            // Calcula el nuevo total con descuento aplicado
+            const precioPorNoche = parseFloat(document.getElementById('total-precio').innerText);
+            const nuevoTotal = precioPorNoche - (precioPorNoche * parseFloat(descuento) / 100);
+            document.getElementById('total-precio').innerText = nuevoTotal.toFixed(2);
+        });
+    });
+}); */
 
 

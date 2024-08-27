@@ -1,0 +1,74 @@
+/* ESTILOS PARA EL FORMULARIO DE REGISTRO DE RESERVA  */
+
+* {
+    font-family: sans-serif;
+}
+
+
+.container-formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+
+}
+
+.container-formulario .title-form {
+    color: rgb(244, 28, 28);
+    text-align: center;
+}
+
+.contenido-formulario {
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 10px;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 20px;
+    width: 100%;
+}   
+
+.informacion-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.habitacion-descripcion {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.habitacion-descripcion img{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.datos-formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.detalles-formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+    /* justify-content: center; */
+}

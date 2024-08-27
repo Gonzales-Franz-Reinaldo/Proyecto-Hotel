@@ -19,7 +19,7 @@
     </div>
 
     <div id="habitacionesLista" class="habitacionesLista">
-    <!-- Aquí se cargarán las habitaciones según el tipo seleccionado -->
+    <!-- Aquí se cargarán las habitaciones -->
     </div>
    
    
@@ -29,7 +29,7 @@
 
 <style>
     
-html, body {
+    html, body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -38,7 +38,7 @@ html, body {
 
 body {
     font-family: 'Roboto', sans-serif; 
-    background-color:blanco; 
+    background-color: #FFFFFF; /* Blanco */
     color: #333;
 }
 
@@ -53,41 +53,40 @@ h2 {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Asegura que el h2 ocupe todo el ancho */
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Asegura que el menú ocupe todo el ancho de la pantalla */
+/* Estilo para el menú de habitaciones */
 .habitaciones-menu {
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
-    list-style-type: none;
     background-color: #B0E0E6; /* Azul Pastel */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Asegura que el menú ocupe todo el ancho */
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Asegura que cada opción en el menú ocupe un espacio flexible */
+/* Estilo para cada opción del menú */
 .menu-opcion {
-    flex: 1; /* Esto asegura que las opciones ocupen el espacio disponible */
+    flex: 1;
     text-align: center;
 }
 
-/* Asegura que el enlace en cada opción del menú ocupe todo el espacio de su contenedor */
+/* Estilo para los enlaces del menú */
 .menu-opcion a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: #2c3e50; /* Color de texto inicial */
+    text-decoration: none;
+    color: #2c3e50;
     font-size: 18px;
     font-weight: 500;
     padding: 12px 25px;
     display: block;
     border-radius: 8px;
     transition: color 0.3s ease;
-    background-color: transparent; /* Fondo transparente */
+    background-color: transparent;
     font-weight: 700;
 }
 
@@ -96,21 +95,14 @@ h2 {
     color: #FF7F50; /* Coral */
 }
 
-/* Opcional para mejorar la visualización de los enlaces en dispositivos móviles */
-@media (max-width: 768px) {
-    .menu-opcion a {
-        padding: 12px 15px;
-        font-size: 16px;
-    }
-}
-
 /* Estilo para la lista de habitaciones */
 .habitacionesLista {
     display: flex;
-    flex-direction: column; /* Cambia la dirección a columna */
-    align-items: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 20px;
-    padding: 0 15px; /* Agrega un poco de espacio a los lados */
+    padding: 0 15px;
 }
 
 /* Estilo para cada ítem de habitación */
@@ -118,89 +110,73 @@ h2 {
     background-color: #FFF;
     border: 1px solid #D3D3D3;
     border-radius: 8px;
-    margin: 15px 0; /* Espacio vertical entre recuadros */
     padding: 20px;
-    width: 90%; /* Más ancho */
-    max-width: 800px; /* Ancho máximo más amplio */
-    height: auto; /* Ajusta la altura automáticamente */
+    width: calc(50% - 120px); /* Ajuste del ancho de los ítems */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 /* Imagen en el recuadro de habitación */
 .habitacion-item img {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    max-width: 700px; /* Limita el ancho máximo de la imagen */
-    height: 300px; /* Establece una altura fija para la imagen */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarla */
+    width: 100%;
+    max-width: 700px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 5px;
-}
-
-/* Detalles de la habitación */
-.habitacion-detalle {
-    margin-top: 10px;
-}
-
-.habitacion-detalle h3 {
-    font-size: 22px;
-    color: #FF7F50; /* Coral para el título */
-    margin-bottom: 10px;
-}
-
-.habitacion-detalle p {
-    font-size: 16px;
-    color: #000; /* Negro para la descripción */
-    margin-bottom: 10px;
 }
 
 /* Estilo para los botones de acción */
 .habitacion-actions {
     display: flex;
-    flex-direction: column; /* Los botones estarán uno debajo del otro */
-    align-items: center;
+    gap: 10px;
     margin-top: 15px;
 }
 
+/* Botones de acción */
 .habitacion-actions .boton_detalles a,
 .habitacion-actions .boton_reserva a {
-    color: #FFF; /* Texto en blanco */
+    color: #FFF;
     padding: 12px 20px;
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
-    font-weight: 700; /* Letra más gruesa (negrilla) */
+    font-weight: 700;
     font-size: 16px;
-    margin: 5px;
     display: block;
 }
 
 /* Botón de Ver Detalles */
 .boton_detalles a {
-    background: linear-gradient(to right, #B0E0E6, #FF7F50); /* Mezcla de celeste y coral */
+    background: linear-gradient(to right, #B0E0E6, #FF7F50);
 }
 
 .boton_detalles a:hover {
-    background-color: #D3D3D3; /* Gris claro */
-    color: #6e6666; /* Gris oscuro para el texto */
+            background: linear-gradient(to right, #FF7F50, #B0E0E6); 
+        }
+
+.boton_detalles a:hover {
+    background-color: #D3D3D3;
+    color: #6e6666;
 }
 
 /* Botón de Reservar Ahora */
 .boton_reserva a {
-    background: linear-gradient(to right, #FF7F50, #B0E0E6); /* Mezcla de coral y celeste */
+    background: linear-gradient(to right, #FF7F50, #B0E0E6);
 }
 
 .boton_reserva a:hover {
-    background-color: #D3D3D3; /* Gris claro */
-    color: #6e6666; /* Gris oscuro para el texto */
+            background: linear-gradient(to left, #FF7F50, #B0E0E6); 
+        }
+
+.boton_reserva a:hover {
+    background-color: #D3D3D3;
+    color: #6e6666;
 }
 
-/* Cambiar color y estilo para Capacidad, Precio y Estado */
-.habitacion-item .detalle-item {
-    color: #B0E0E6; /* Celeste */
-    font-weight: 700; /* Letra más gruesa (negrilla) */
-}
 
 </style>

@@ -17,7 +17,7 @@ while ($row = $result->fetch_assoc()) {
     echo '<p>Estado: ' . ucfirst($row['estado']) . '</p>';  // Muestra el estado de la habitación
     echo '<div class="habitacion-actions">';
     echo '<div class="boton_detalles"><a href="javascript:cargarDescripcionesH(\'./Client/src/models/detalle_habitacion.php?id_habitacion=' . $row['id_habitacion'] . '\')">Ver Detalles</a></div>';
-   // echo '<div class="boton_reserva"><a href="javascript:cargarConsultas(\'./Client/src/models/reservar_habitacion.php?id_habitacion=' . $row['id_habitacion'] . '\')">Reservar Ahora</a></div>';
+   echo '<div class="boton_reserva"><a href="javascript:cargarFormulario(\'./Client/src/models/reserva_habitacion.php?id_habitacion=' . $row['id_habitacion'] . '\')">Reservar Ahora</a></div>';
     echo '</div>'; 
     echo '</div>'; 
     echo '</div>'; 
@@ -27,10 +27,10 @@ $connect->close();
 ?>
 
 <style>
-    /* Estilos para las habitaciones */
+  
 .habitacion-item {
-    background-color: #FFF; /* Fondo blanco para las tarjetas de habitaciones */
-    border: 1px solid #D3D3D3; /* Borde gris claro */
+    background-color: #FFF; 
+    border: 1px solid #D3D3D3;
     border-radius: 8px;
     margin: 10px;
     padding: 15px;
