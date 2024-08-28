@@ -145,8 +145,8 @@ function volverHabitaciones(tipo_habitacion){
         .then(response => response.text())
         .then(data => {
             habitacionesL.innerHTML = data;
-            menu_title.style.display = "block"; // Mantén esto en "block" para mostrar el título
-            habitaciones.style.display = "flex"; // Cambia a "flex" para mantener los elementos en fila
+            menu_title.style.display = "block"; 
+            habitaciones.style.display = "flex"; 
         })
         .catch(error => console.error('Error al cargar las habitaciones:', error));
 }
