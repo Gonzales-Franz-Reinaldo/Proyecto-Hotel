@@ -21,6 +21,7 @@ if ($id_habitacion) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +30,17 @@ if ($id_habitacion) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="detalle-habitacion">
+
+
+        <div class="volver-atras">
+            <a href="javascript:cargarHabitaciones('./Client/src/models/habitaciones.php?tipo_hab=<?php echo $habitacion['tipo_hab']; ?>')">
+                <i class="fas fa-arrow-left"></i> Volver a Habitaciones
+            </a> 
+        </div>
+
         <div class="descripcion">
             <h1>Habitación <?php echo $habitacion['num_habitacion']; ?></h1>
             <p class="mensaje-inicial">¡Descubre la comodidad y el lujo de nuestra habitación <?php echo $habitacion['num_habitacion']; ?>! Perfecta para tu descanso y relajación.</p>
@@ -42,7 +52,7 @@ if ($id_habitacion) {
             </div>
         </div>
         <div class="descripcion-detalle">
-            
+
             <div class="detalle-item">
                 <i class="fas fa-hashtag"></i>
                 <span>Habitación: <?php echo $habitacion['num_habitacion']; ?></span>
@@ -87,7 +97,7 @@ if ($id_habitacion) {
                 <i class="fas fa-circle"></i>
                 <span>Aire Acondicionado</span>
 
-            
+
             </div>
 
             <div class="detalle-item">
@@ -95,123 +105,146 @@ if ($id_habitacion) {
                 <span>TV cable</span>
             </div>
 
-            
+
+        </div>
+
+        <div class="boton_reserva_">
+            <button class="boton_reserva" onclick="cargarForm(<?php echo $id_habitacion ?>)">RESERVAR</button>
         </div>
     </div>
 </body>
+
 </html>
 
 <style>
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-.detalle-habitacion {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    .detalle-habitacion {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+    }
 
-.descripcion {
-    margin-bottom: 30px;
-}
+    .descripcion {
+        margin-bottom: 30px;
+    }
 
-.descripcion h1 {
-    margin: 0;
-    color: #FF7F50; /* Coral */
-    font-size: 32px;
-    text-align: center;
-    font-weight: 700;
-}
+    .descripcion h1 {
+        margin: 0;
+        color: #FF7F50;
+        /* Coral */
+        font-size: 32px;
+        text-align: center;
+        font-weight: 700;
+    }
 
-.mensaje-inicial {
-    font-size: 18px;
-    color: #666;
-    margin: 10px 0 20px;
-    text-align: center;
-}
+    .mensaje-inicial {
+        font-size: 18px;
+        color: #666;
+        margin: 10px 0 20px;
+        text-align: center;
+    }
 
-.detalle-contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.detalle-info {
-    max-width: 600px;
-    text-align: left;
-    margin-right: 20px; /* Aleja el texto del borde derecho */
-    margin-left: 20px; /* Agrega espacio en el lado izquierdo */
-    padding: 0 10px; /* Agrega padding para más separación */
-}
-
-.detalle-info p {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.habitacion-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.descripcion-detalle {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.descripcion-detalle h2 {
-    margin-top: 0;
-    color: #007bff;
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.detalle-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.detalle-item i {
-    font-size: 24px;
-    color: #007bff;
-    margin-right: 10px;
-}
-
-.detalle-item span {
-    font-weight: 400;
-}
-
-@media (min-width: 768px) {
     .detalle-contenido {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        gap: 20px;
     }
 
     .detalle-info {
-        max-width: 60%;
+        max-width: 600px;
+        text-align: left;
+        margin-right: 20px;
+        /* Aleja el texto del borde derecho */
+        margin-left: 20px;
+        /* Agrega espacio en el lado izquierdo */
+        padding: 0 10px;
+        /* Agrega padding para más separación */
+    }
+
+    .detalle-info p {
+        margin: 10px 0;
+        font-size: 18px;
+        color: #333;
+        text-align: justify;
     }
 
     .habitacion-img {
-        max-width: 35%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-}
+
+    .descripcion-detalle {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    .descripcion-detalle h2 {
+        margin-top: 0;
+        color: #007bff;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .detalle-item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .detalle-item i {
+        font-size: 24px;
+        color: #007bff;
+        margin-right: 10px;
+    }
+
+    .detalle-item span {
+        font-weight: 400;
+    }
+
+    @media (min-width: 768px) {
+        .detalle-contenido {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .detalle-info {
+            max-width: 60%;
+        }
+
+        .habitacion-img {
+            max-width: 35%;
+        }
+    }
+
+    
+    .boton_reserva_{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>

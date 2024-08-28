@@ -44,12 +44,33 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
+    display: flex;
 }
 
 .habitacion-descripcion img{
-    width: 400px;
-    height: 250px;
+    width: 50%;
+    height: 200px;
     border-radius: 10px;
+}
+
+.habitacion-descripcion .datos-hab{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 50%;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.habitacion-descripcion .datos-hab h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.habitacion-descripcion .datos-hab p{
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .datos-formulario {
@@ -71,4 +92,275 @@
     padding: 10px;
     align-items: center;
     /* justify-content: center; */
+}
+
+.datos-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+
+.datos-formulario h2{
+    text-align: center;
+}
+
+.datos-formulario input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.datos-formulario select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;        
+}
+
+
+
+
+
+
+
+
+.detalles-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    background-color: #f5f5f5;
+}
+
+.detalles-formulario h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* .detalles-formulario select,
+.detalles-formulario button,
+.detalles-formulario .promociones-disponibles,
+.detalles-formulario .detalles-reserva {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+} */
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button.btn_omitir{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button.boton_reserva {
+    margin-top: 20px;
+    padding: 18px 36px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #B0E0E6, #FF7F50);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn_omitir:hover{
+    background: #dc3545;
+}
+button.boton_reserva:hover {
+    background: linear-gradient(to right, #90c6e4, #f07142);
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.promociones-disponibles,
+.detalles-reserva {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.promociones-disponibles p,
+.detalles-reserva p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.detalles-reserva strong {
+    font-weight: bold;
+}
+
+#precio_total_ {
+    font-size: 18px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.precio_descuento{
+    font-size: 18px;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.total_descuento{
+    font-size: 18px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* Contenedor del select con el botón omit */
+.promocion-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button.btn_omitir {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.btn_omitir:hover {
+    background-color: #dc3545
+}
+
+.promociones-disponibles {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: block;
+    max-width: 500px;
+    width: 100%;
+}
+
+.promociones-disponibles p {
+    font-size: 18px;
+    margin: 0;
+    color: #555;
+    display: block;
+}
+
+.detalles-reserva {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.detalle_promocion{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_promo{
+    /* estilos de un botton */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(46, 110, 230);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+
+/* CSS */
+.styled-date {
+    width: 250px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+    cursor: pointer;
+}
+
+.styled-date::-webkit-calendar-picker-indicator {
+    font-size: 20px; 
+    cursor: pointer; 
+}
+
+.styled-date:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+
+
+.cancelar-promo{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.opciones-promo{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }

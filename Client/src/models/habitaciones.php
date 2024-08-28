@@ -17,7 +17,7 @@ while ($row = $result->fetch_assoc()) {
     echo '<p>Estado: ' . ucfirst($row['estado']) . '</p>';  // Muestra el estado de la habitación
     echo '<div class="habitacion-actions">';
     echo '<div class="boton_detalles"><a href="javascript:cargarDescripcionesH(\'./Client/src/models/detalle_habitacion.php?id_habitacion=' . $row['id_habitacion'] . '\')">Ver Detalles</a></div>';
-   echo '<div class="boton_reserva"><a href="javascript:cargarFormulario(\'./Client/src/models/reserva_habitacion.php?id_habitacion=' . $row['id_habitacion'] . '\')">Reservar Ahora</a></div>';
+    echo '<div class="boton_reserva"><a href="javascript:cargarFormulario(\'./Client/src/models/reserva_habitacion.php?id_habitacion=' . $row['id_habitacion'] . '\')">Reservar Ahora</a></div>';
     echo '</div>'; 
     echo '</div>'; 
     echo '</div>'; 
@@ -59,6 +59,8 @@ $connect->close();
     font-size: 16px;
     color: #6e6666; /* Gris oscuro para el texto */
     margin-bottom: 10px;
+    /* poner justificado el texto */
+    
 }
 
 /* Estilos para los botones de acción */

@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Menú de Habitaciones</h2>
+    <h2 id="menu-title">Menú de Habitaciones</h2>
    
-    <div class="habitaciones-menu">
+    <div class="habitaciones-menu" id="habitaciones-menu">
        <div class="menu-opcion"><a href="javascript:cargarHabitaciones('./Client/src/models/habitaciones.php?tipo_hab=Simple')">Simple</a></div>
        <div class="menu-opcion"><a href="javascript:cargarHabitaciones('./Client/src/models/habitaciones.php?tipo_hab=familiar')">Familiar</a></div>
        <div class="menu-opcion"><a href="javascript:cargarHabitaciones('./Client/src/models/habitaciones.php?tipo_hab=matrimonial')">Matrimonial</a></div> 

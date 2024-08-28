@@ -19,9 +19,17 @@ if (isset($_GET['id_promocion'])) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         echo '<div class="detalle-promocion">';
+
+        echo "
+            <div class='volver-atras'>
+                <a href=\"javascript:cargarContenido('./Client/src/models/promociones.php')\">
+                    <i class='fas fa-arrow-left'></i> Volver a promociones
+                </a>
+            </div>
+        ";
         echo '<h2>' . htmlspecialchars($row['tipo_promocion']) . '</h2>';
         echo '<img src="./Client/public/images/promociones/' . htmlspecialchars($row['imagen']) . '" alt="Imagen de la promoción">';
-        echo '<p>' . htmlspecialchars($row['descripcion_completa']) . '</p>';
+        echo '<p class="descripcion-completa">' . htmlspecialchars($row['descripcion_completa']) . '</p>';
         echo '<p><strong>Descuento:</strong> ' . htmlspecialchars($row['descuento']) . '%</p>';
         echo '<p><strong>Válida desde:</strong> ' . htmlspecialchars($row['fecha_ini']) . ' hasta ' . htmlspecialchars($row['fecha_final']) . '</p>';
         echo '<div class="boton_consulta"><a href="javascript:cargarConsultas(\'./Client/src/models/consultas.php?id=' . $row['id_promocion'] . '\')">Consultar</a></div>';
@@ -55,12 +63,23 @@ $connect->close();
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         max-width: 800px;
         margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: 'Arial', sans-serif;
+        flex-direction: column;
     }
 
     .detalle-promocion h2 {
         color: #333;
         font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .detalle-promocion img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
         margin-bottom: 15px;
     }
 
@@ -95,5 +114,9 @@ $connect->close();
 
     .boton_consulta a:hover {
         background-color: #c82333;
+    }
+
+    .descripcion-completa{
+        text-align: justify;
     }
 </style>
