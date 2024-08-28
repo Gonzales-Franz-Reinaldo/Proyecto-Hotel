@@ -58,8 +58,12 @@ h2 {
 }
 
 /* Estilo para el menú de habitaciones */
+
+
+
+
 .habitaciones-menu {
-    display: flex;
+    display: flex; /* Esto asegura que los elementos estén en una fila */
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -69,6 +73,7 @@ h2 {
     width: 100%;
     box-sizing: border-box;
 }
+
 
 /* Estilo para cada opción del menú */
 .menu-opcion {

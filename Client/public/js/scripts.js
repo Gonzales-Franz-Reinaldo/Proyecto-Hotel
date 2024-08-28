@@ -118,11 +118,13 @@ function cargarDescripcionesH(url) {
         .catch(error => console.error('Error al cargar el contenido:', error));
 }
 
+
+
+
 function cargarFormulario(url) {
     var habitacionesL = document.getElementById("habitacionesLista");
     var menu_title = document.getElementById("menu-title");
     var habitaciones = document.getElementById("habitaciones-menu");
-
 
     fetch(url)
         .then(response => response.text())
@@ -134,12 +136,7 @@ function cargarFormulario(url) {
         .catch(error => console.error('Error al cargar el contenido:', error));
 }
 
-
-
-
-
 function volverHabitaciones(tipo_habitacion){
-    // alert("Volver a habitaciones" + tipo_habitacion);
     var habitacionesL = document.getElementById("habitacionesLista");
     var menu_title = document.getElementById("menu-title");
     var habitaciones = document.getElementById("habitaciones-menu");
@@ -148,11 +145,12 @@ function volverHabitaciones(tipo_habitacion){
         .then(response => response.text())
         .then(data => {
             habitacionesL.innerHTML = data;
-            menu_title.style.display = "block";
-            habitaciones.style.display = "block";
+            menu_title.style.display = "block"; // Mantén esto en "block" para mostrar el título
+            habitaciones.style.display = "flex"; // Cambia a "flex" para mantener los elementos en fila
         })
         .catch(error => console.error('Error al cargar las habitaciones:', error));
 }
+
 
 
 
@@ -160,16 +158,6 @@ function cargarForm(id_habitacion){
 
     cargarFormulario('./Client/src/models/reserva_habitacion.php?id_habitacion=' + id_habitacion);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
